@@ -13,12 +13,12 @@ clear all; clc; close all;
 %   parameters
 %   Remember to change them into proper values before sending in inputs.
 theta_1_deg = 60;
-k_0 = 100;
-e_1 = 1;
-h_2 = 1;
-p_1 = 1;
-e_theory = 1;
-threshold = 0.001;
+k_0 = 100; %
+e_1 = 1; %check it on riken.jp/Thzdatabase
+h_2 = 1; %thickness <-- no need
+p_1 = 1; %calculate from theta_1 & e_1
+e_theory = 1; % <-- no need
+threshold = 0.001; % <-- no need
 
 %   input part.
 %   When importing datam make sure to comment out the overide test input
