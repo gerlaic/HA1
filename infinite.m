@@ -13,7 +13,7 @@ clear all; clc; close all;
 %   parameters
 %   Remember to change them into proper values before sending in inputs.
 theta_1_deg = 60;
-k_0 = 100; %
+k_0 = 100; %calulate from different frequencies
 e_1 = 1; %check it on riken.jp/Thzdatabase
 h_2 = 1; %thickness <-- no need
 p_1 = 1; %calculate from theta_1 & e_1
