@@ -26,10 +26,10 @@ threshold = 0.001; % <-- no need
 %   [];" to "input_freq = $some_proper_input_format"
 input_size = 100
 input_freq = 1:1:input_size;
-%input_freq = [];   %actually cmd for test
+%input_freq = [];   %actual cmd for test
 
 input_r = zeros(input_size,1);
-%input_r = [];  %actually cmd for test
+%input_r = [];  %actual cmd for test
 
 output_e = zeros(input_size,1);
 
