@@ -10,10 +10,7 @@ e_1 = 1;
 h_2 = 1;
 p_1 = 1;
 e_theory = 1;
-max_error = 0.001;
-
-bigA = [1,2,3];
-bigR = [1,2,3];
+threshold = 0.001;
 
 %basic calculation
 theta_1_rad = theta_1_deg /180 * pi;
@@ -123,7 +120,7 @@ e_2 = 0.5;
 
 %solve for e_2
 ii = 0;
-while e_theory-e_2 > max_error
+while e_theory-e_2 > threshold
     ii = ii+1;
     
     %solve t_j (j = ii*2+1)

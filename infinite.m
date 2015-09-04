@@ -53,7 +53,7 @@ rb = rr - n21;
 %   solve for different input frequency and reflect
 for i=1:length(input_r)
     syms r1;
-    output_e(i) = solve((ru(1)*r1^2+ru(2)*r1+ru(3)*r1)/(rb(1)*r1^2+ru(2)*r1+ru(3)*r1) == output_e(i));
+    output_e(i) = solve((ru(1)*r1^2+ru(2)*r1+ru(3)*r1)/(rb(1)*r1^2+ru(2)*r1+ru(3)*r1) == input_r(i));
     %   this currently throws an error due to there is no solution for
     %   current parameters.
 end
