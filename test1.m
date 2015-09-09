@@ -11,6 +11,7 @@
 clear all; clc; close all;
 
 %parameters
+%>> verify the parameters that I need
 max_length = 100;
 theta_1_deg = 60;
 c = 3E8; %speed of light
