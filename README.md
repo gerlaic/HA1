@@ -1,3 +1,7 @@
+##2015-09-10
+1. add NEW FILE "importData.m"
+2. It is a function that reads in the testing data and save them into two variables: freq and amplitude.
+
 ##2015-09-05
 1. add NEW FILE "test1.m"
 2. It is designed to test the first set of testing data.
