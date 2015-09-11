@@ -37,7 +37,7 @@ for ii = 1:height(testData)
     %   Start Calculating refractive index
     %   Zeroth Order
     qT = [1, 0; 0, 1 / q_1];
-    AR = [A + R); R - A];
+    AR = [A + R; R - A];
     transmit = rref([qT, AR]);
     q_2 = transmit(2, end) / transmit(1, end); %transmit(1, end) is T
     n_2 = sqrt(sin(theta_1_rad) * sqrt(e_1) / q_2);
