@@ -1,7 +1,7 @@
 %   This is pseudo-code/incomplete code to outline the steps of our
 %   problem. It is partially based on the code written by Bing (infinite.m)
 %   but should not depend on it to work.
-tol 
+
 
 %init
 clear all; clc; close all;
