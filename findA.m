@@ -6,7 +6,7 @@
 function A = findA(e_1, q_1, theta_1_rad, filename)
 %   Variables
 e_air = 1; % Precision can be added here
-theta_air = arcsin(sin(theta_1_rad) * sqrt(e_1)/sqrt(e_air));
+theta_air = asin(sin(theta_1_rad) * sqrt(e_1)/sqrt(e_air));
 q_air = sqrt(1/e_air) * cos(theta_air); 
 refData = importData(filename);
 A = zeros(height(refData), 1);
