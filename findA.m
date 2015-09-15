@@ -8,10 +8,10 @@ function A = findA(e_1, q_1, theta_1_rad, filename)
 e_air = 1; % Precision can be added here
 theta_air = asin(sin(theta_1_rad) * sqrt(e_1)/sqrt(e_air));
 q_air = sqrt(1/e_air) * cos(theta_air); 
-refData = importData(filename);
-A = zeros(height(refData), 1);
-for ii = 1:height(refData)
-    R = sqrt(refData(ii, 2));% this is the measured reflected amplitude. 
+[freq, power] = importData(filename);
+A = zeros(size(freq, 1), 1);
+for ii = 1:size(freq, 1)
+    R = sqrt(power(ii));% this is the measured reflected amplitude. 
     %             It should be the square-root of the measured frequency-
     %             domain data for the reference measurements
 
