@@ -8,8 +8,8 @@ clear all; clc; close all;
 
 %   Specified parameters
 %   Remember to change them into proper values before sending in inputs.
-refDataFile = 'reference_Sample01_A_354kN_132ps_power.xls';
-testDataFile = 'Sample01_A_354kN_132ps_power.xls';
+refDataFile = 'reference_Sample01_A_354kN_132ps_power.xlsx';
+testDataFile = 'Sample01_A_354kN_132ps_power.xlsx';
 
 theta_1_deg = 57; % this figure was given by Wenwei [degrees]
 e_1 = 3.42; % Si permitivity check it on riken.jp/Thzdatabase [unitless]
@@ -24,16 +24,16 @@ q_1 = sqrt(1/e_1) * cos(theta_1_rad);
 
 %   Imported parameters
 A_all = findA(e_1, q_1, theta_1_rad, refDataFile);
-testData = importData(testDataFile);
-R_tot = sqrt(testData(ii, 2));% this is the measured reflected amplitude.
+[freq, power] = importData(testDataFile);
+
+
+for ii = 1:size(freq, 1)
+    R = sqrt(power(ii));% this is the measured reflected amplitude.
 %                 It should be the square-root of the measured frequency-
 %                 domain data for the sample measurements
-
-
-for ii = 1:height(testData)
     A = A_all(ii);
-    R = R_tot(ii);
-    k_0 = testData(ii, 1) * 1E12/c;
+    %R = R_tot(ii);
+    k_0 = freq(ii) * 1E12/c;
     %   Start Calculating refractive index
     %   Zeroth Order
     qT = [1, 0; 0, 1 / q_1];
@@ -72,4 +72,4 @@ for ii = 1:height(testData)
 end
 
 %Handle complete data set and plot
-figure, plot(testData(:, 1),n_2plot)
+figure, plot(freq,n_2plot)
